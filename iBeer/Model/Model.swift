@@ -66,7 +66,7 @@ struct Model {
     }
     
     private func loadManufacturersFromDocuments() throws -> [Manufacturer] {
-        let documentsURL = Constants.kFM.urls(for: .documentDirectory, in: .userDomainMask).first
+        let documentsURL = Constants.kFM.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(Constants.kFullFileName)
         
         guard let documentsURL = documentsURL else { return [] }
         

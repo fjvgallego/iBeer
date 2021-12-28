@@ -19,11 +19,12 @@
 		09330251277A469D001E42D3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330250277A469D001E42D3 /* Model.swift */; };
 		09330255277A471B001E42D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330254277A471B001E42D3 /* Constants.swift */; };
 		09330259277A4B83001E42D3 /* ManufacturersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330258277A4B83001E42D3 /* ManufacturersViewController.swift */; };
-		0933025B277A4BB5001E42D3 /* AddManufacturerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933025A277A4BB5001E42D3 /* AddManufacturerViewController.swift */; };
 		0933025D277A4BC9001E42D3 /* ManufacturerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933025C277A4BC9001E42D3 /* ManufacturerTableViewCell.swift */; };
 		0933025F277A4BDC001E42D3 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933025E277A4BDC001E42D3 /* BeerTableViewCell.swift */; };
 		09330261277A4C0D001E42D3 /* ManufacturerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330260277A4C0D001E42D3 /* ManufacturerDetailViewController.swift */; };
-		09330263277A4C24001E42D3 /* EditBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330262277A4C24001E42D3 /* EditBeerViewController.swift */; };
+		09330265277A557D001E42D3 /* AddManufacturerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330264277A557D001E42D3 /* AddManufacturerTableViewController.swift */; };
+		09330267277A55A7001E42D3 /* EditBeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330266277A55A7001E42D3 /* EditBeerTableViewController.swift */; };
+		09AF8289277B7774006EE9F9 /* appdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09AF8288277B7774006EE9F9 /* appdata.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +42,12 @@
 		09330250277A469D001E42D3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		09330254277A471B001E42D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		09330258277A4B83001E42D3 /* ManufacturersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersViewController.swift; sourceTree = "<group>"; };
-		0933025A277A4BB5001E42D3 /* AddManufacturerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManufacturerViewController.swift; sourceTree = "<group>"; };
 		0933025C277A4BC9001E42D3 /* ManufacturerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerTableViewCell.swift; sourceTree = "<group>"; };
 		0933025E277A4BDC001E42D3 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
 		09330260277A4C0D001E42D3 /* ManufacturerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerDetailViewController.swift; sourceTree = "<group>"; };
-		09330262277A4C24001E42D3 /* EditBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBeerViewController.swift; sourceTree = "<group>"; };
+		09330264277A557D001E42D3 /* AddManufacturerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManufacturerTableViewController.swift; sourceTree = "<group>"; };
+		09330266277A55A7001E42D3 /* EditBeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBeerTableViewController.swift; sourceTree = "<group>"; };
+		09AF8288277B7774006EE9F9 /* appdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = appdata.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		09330231277A4393001E42D3 /* iBeer */ = {
 			isa = PBXGroup;
 			children = (
+				09AF8288277B7774006EE9F9 /* appdata.txt */,
 				09330232277A4393001E42D3 /* AppDelegate.swift */,
 				09330234277A4393001E42D3 /* SceneDelegate.swift */,
 				09330254277A471B001E42D3 /* Constants.swift */,
@@ -132,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				09330258277A4B83001E42D3 /* ManufacturersViewController.swift */,
-				0933025A277A4BB5001E42D3 /* AddManufacturerViewController.swift */,
+				09330264277A557D001E42D3 /* AddManufacturerTableViewController.swift */,
 				0933025C277A4BC9001E42D3 /* ManufacturerTableViewCell.swift */,
 			);
 			path = Manufacturers;
@@ -142,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				09330260277A4C0D001E42D3 /* ManufacturerDetailViewController.swift */,
-				09330262277A4C24001E42D3 /* EditBeerViewController.swift */,
+				09330266277A55A7001E42D3 /* EditBeerTableViewController.swift */,
 				0933025E277A4BDC001E42D3 /* BeerTableViewCell.swift */,
 			);
 			path = Beers;
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09AF8289277B7774006EE9F9 /* appdata.txt in Resources */,
 				0933023F277A4393001E42D3 /* LaunchScreen.storyboard in Resources */,
 				0933023C277A4393001E42D3 /* Assets.xcassets in Resources */,
 				0933023A277A4393001E42D3 /* Main.storyboard in Resources */,
@@ -219,17 +223,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09330265277A557D001E42D3 /* AddManufacturerTableViewController.swift in Sources */,
 				09330233277A4393001E42D3 /* AppDelegate.swift in Sources */,
 				09330259277A4B83001E42D3 /* ManufacturersViewController.swift in Sources */,
 				0933024D277A44EE001E42D3 /* Manufacturer.swift in Sources */,
 				09330235277A4393001E42D3 /* SceneDelegate.swift in Sources */,
+				09330267277A55A7001E42D3 /* EditBeerTableViewController.swift in Sources */,
 				0933024B277A443A001E42D3 /* BeerType.swift in Sources */,
-				0933025B277A4BB5001E42D3 /* AddManufacturerViewController.swift in Sources */,
 				09330249277A43D6001E42D3 /* Beer.swift in Sources */,
 				0933025F277A4BDC001E42D3 /* BeerTableViewCell.swift in Sources */,
 				0933024F277A4520001E42D3 /* Origin.swift in Sources */,
 				09330261277A4C0D001E42D3 /* ManufacturerDetailViewController.swift in Sources */,
-				09330263277A4C24001E42D3 /* EditBeerViewController.swift in Sources */,
 				09330251277A469D001E42D3 /* Model.swift in Sources */,
 				09330255277A471B001E42D3 /* Constants.swift in Sources */,
 				0933025D277A4BC9001E42D3 /* ManufacturerTableViewCell.swift in Sources */,
