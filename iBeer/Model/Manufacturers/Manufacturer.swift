@@ -17,7 +17,7 @@ struct Manufacturer: Codable, Equatable {
     let establishmentDate: Date
     var formattedEstablishmentDate: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-YY-mmmm"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         return dateFormatter.string(from: establishmentDate)
     }
     let logoData: Data?
@@ -35,7 +35,7 @@ struct Manufacturer: Codable, Equatable {
     init?(fromLine line: String) {
         let mainFields = line.components(separatedBy: "#")
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-YY-mmmm"
+        dateFormatter.dateFormat = "dd-MM-yyyy"
         
         guard mainFields.count == 5,
               let establishmentDate = dateFormatter.date(from: mainFields[1]),

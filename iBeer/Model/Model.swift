@@ -8,11 +8,15 @@
 import Foundation
 
 struct Model {
-    static let shared = Model()
+    static var shared = Model()
     private(set) var manufacturers = [Manufacturer]()
     
     init() {
         loadManufacturers()
+    }
+    
+    func getManufacturersForOrigin(_ origin: Origin) -> [Manufacturer] {
+        manufacturers.filter { $0.origin == origin }
     }
     
     // MARK: Methods to work with data.
@@ -59,7 +63,6 @@ struct Model {
         
         let manufacturers = documentLines.compactMap { Manufacturer(fromLine: $0) }
         return manufacturers
-
     }
     
     private func loadManufacturersFromDocuments() throws -> [Manufacturer] {

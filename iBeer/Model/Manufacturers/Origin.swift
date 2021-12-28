@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Origin: String, Codable {
+enum Origin: String, Codable, CaseIterable {
     case national = "Nacional"
     case foreign = "Extranjero"
 }
