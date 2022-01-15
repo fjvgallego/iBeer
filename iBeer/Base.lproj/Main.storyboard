@@ -7,6 +7,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kanit-Light.ttf">
+            <string>Kanit-Light</string>
+        </array>
+        <array key="Kanit-Medium.ttf">
+            <string>Kanit-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Fabricantes-->
         <scene sceneID="w70-Ry-byG">
@@ -24,7 +32,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Añadir Fabricante">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                    <fontDescription key="titleFontDescription" name="Kanit-Medium" family="Kanit" pointSize="17"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -50,17 +58,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HDv-YR-E3G">
-                                                    <rect key="frame" x="86.5" y="12.5" width="625.5" height="41.5"/>
+                                                    <rect key="frame" x="86.5" y="6" width="625.5" height="54.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mahou" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ5-qL-6nQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="625.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="625.5" height="28.5"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01-01-1890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbw-Eu-uMT">
-                                                            <rect key="frame" x="0.0" y="25.5" width="625.5" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <rect key="frame" x="0.0" y="33.5" width="625.5" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -126,15 +134,15 @@
                             <tableViewSection headerTitle="Nombre" id="hrf-fn-NQK">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TAH-Yr-BqJ">
-                                        <rect key="frame" x="0.0" y="44.5" width="744" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="744" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TAH-Yr-BqJ" id="Doi-ZY-jJB">
-                                            <rect key="frame" x="0.0" y="0.0" width="744" height="50.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="744" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del fabricante" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGr-Ct-vRk">
-                                                    <rect key="frame" x="16" y="8" width="712" height="34.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="16" y="8" width="712" height="40"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
                                                         <action selector="textEditingChanged:" destination="x1c-3Q-ckV" eventType="editingChanged" id="FNR-1q-bhG"/>
@@ -154,7 +162,7 @@
                             <tableViewSection headerTitle="Fecha de Fundación" id="bfZ-Fl-rxi">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="OwQ-fT-uwk">
-                                        <rect key="frame" x="0.0" y="162" width="744" height="248.5"/>
+                                        <rect key="frame" x="0.0" y="167.5" width="744" height="248.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OwQ-fT-uwk" id="sGP-qZ-rHW">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="248.5"/>
@@ -177,7 +185,7 @@
                             <tableViewSection headerTitle="Origen" id="6W9-ZQ-zNH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SFD-ej-pfY">
-                                        <rect key="frame" x="0.0" y="477.5" width="744" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="483" width="744" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SFD-ej-pfY" id="5Oi-3r-WfG">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="47.5"/>
@@ -204,7 +212,7 @@
                             <tableViewSection headerTitle="Logo" id="ahn-yr-am7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6hP-4x-N3q">
-                                        <rect key="frame" x="0.0" y="592" width="744" height="240.5"/>
+                                        <rect key="frame" x="0.0" y="597.5" width="744" height="240.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6hP-4x-N3q" id="jkA-TN-bES">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="240.5"/>
@@ -226,7 +234,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="H09-8t-74W">
-                                        <rect key="frame" x="0.0" y="832.5" width="744" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="838" width="744" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H09-8t-74W" id="Z08-cJ-Dro">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="47.5"/>
@@ -294,15 +302,15 @@
                             <tableViewSection headerTitle="Nombre" id="Gf9-Xb-gGz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mdj-ef-oAu">
-                                        <rect key="frame" x="0.0" y="44.5" width="744" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="744" height="56.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mdj-ef-oAu" id="tl9-Ig-d3f">
-                                            <rect key="frame" x="0.0" y="0.0" width="744" height="50.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="744" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de la cerveza" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="au7-V7-Yip">
-                                                    <rect key="frame" x="16" y="8" width="712" height="34.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="16" y="8" width="712" height="40.5"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -319,7 +327,7 @@
                             <tableViewSection headerTitle="Graduación" id="7Gz-N4-QGa">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="feE-Fk-VSG">
-                                        <rect key="frame" x="0.0" y="162" width="744" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="168" width="744" height="70.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="feE-Fk-VSG" id="0HY-Vc-lig">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="70.5"/>
@@ -327,7 +335,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5O-hg-K4T">
                                                     <rect key="frame" x="36" y="19" width="562" height="32.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -354,7 +362,7 @@
                             <tableViewSection headerTitle="Aporte Calórico" id="OTc-AX-JJz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vzG-iw-3hr">
-                                        <rect key="frame" x="0.0" y="299.5" width="744" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="305.5" width="744" height="70.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vzG-iw-3hr" id="kde-M4-yPg">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="70.5"/>
@@ -362,7 +370,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 kCal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gl-F3-CAH">
                                                     <rect key="frame" x="36" y="19" width="558" height="32.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -389,7 +397,7 @@
                             <tableViewSection headerTitle="Tipo de Cerveza" id="POj-a4-9vn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XHf-xr-F4s">
-                                        <rect key="frame" x="0.0" y="437" width="744" height="248.5"/>
+                                        <rect key="frame" x="0.0" y="443" width="744" height="248.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XHf-xr-F4s" id="Ljn-Zt-Da3">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="248.5"/>
@@ -412,7 +420,7 @@
                             <tableViewSection headerTitle="Imagen" id="l8Z-h5-gFU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mep-Hb-aqS">
-                                        <rect key="frame" x="0.0" y="752.5" width="744" height="232.5"/>
+                                        <rect key="frame" x="0.0" y="758.5" width="744" height="232.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mep-Hb-aqS" id="3Mi-Rg-ANQ">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="232.5"/>
@@ -434,7 +442,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZrH-xe-4uB">
-                                        <rect key="frame" x="0.0" y="985" width="744" height="47.5"/>
+                                        <rect key="frame" x="0.0" y="991" width="744" height="47.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZrH-xe-4uB" id="Gu8-nc-90f">
                                             <rect key="frame" x="0.0" y="0.0" width="744" height="47.5"/>
@@ -506,7 +514,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ordenar por:">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                    <fontDescription key="titleFontDescription" name="Kanit-Medium" family="Kanit" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="orderByTapped:" destination="S5u-j2-xbm" eventType="touchUpInside" id="KSz-F5-d27"/>
@@ -521,7 +529,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Añadir Cerveza">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                    <fontDescription key="titleFontDescription" name="Kanit-Medium" family="Kanit" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="addBeerTapped:" destination="S5u-j2-xbm" eventType="touchUpInside" id="h73-bl-7vf"/>
@@ -541,14 +549,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="434" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3f-jA-yGf">
-                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Mahou" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0H-mm-uR6">
-                                                <rect key="frame" x="80.5" y="0.0" width="353.5" height="50"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <rect key="frame" x="85" y="0.0" width="349" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -561,14 +569,14 @@
                                         <rect key="frame" x="0.0" y="50" width="434" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año de Fundación:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e27-yC-cYh">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEA-8q-Rp3">
-                                                <rect key="frame" x="152" y="0.0" width="282" height="50"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <rect key="frame" x="173.5" y="0.0" width="260.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -581,14 +589,14 @@
                                         <rect key="frame" x="0.0" y="100" width="434" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuO-KD-gi1">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="62.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nacional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkj-Zb-toP">
-                                                <rect key="frame" x="66" y="0.0" width="368" height="50"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <rect key="frame" x="72.5" y="0.0" width="361.5" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -601,14 +609,14 @@
                                         <rect key="frame" x="0.0" y="150" width="434" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de cervezas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhB-gn-gLr">
-                                                <rect key="frame" x="0.0" y="0.0" width="162" height="50"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8s-rk-1iM">
-                                                <rect key="frame" x="172" y="0.0" width="262" height="50"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <rect key="frame" x="191" y="0.0" width="243" height="50"/>
+                                                <fontDescription key="fontDescription" name="Kanit-Medium" family="Kanit" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -638,8 +646,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mahou 0,0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3c-Wg-50H">
-                                                    <rect key="frame" x="86" y="23" width="638" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="86" y="18.5" width="638" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Kanit-Light" family="Kanit" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

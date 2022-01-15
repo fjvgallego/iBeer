@@ -51,6 +51,8 @@ class ManufacturerDetailViewController: UIViewController, UITableViewDelegate, U
             }
             
             orderByButton.setTitle("Ordenar por: \(orderType.rawValue)", for: .normal)
+            
+            UserDefaults.standard.set(orderType.rawValue, forKey: "orderType")
         }
     }
     
@@ -80,6 +82,11 @@ class ManufacturerDetailViewController: UIViewController, UITableViewDelegate, U
         establishmentDateLabel.text = manufacturer.formattedEstablishmentDate
         numberOfBeersLabel.text = "\(manufacturer.beers.count)"
         originLabel.text = manufacturer.origin.rawValue
+        
+        // Order Type - loading from preferences.
+        
+        let orderTypePreferences = UserDefaults.standard.string(forKey: "orderType") ?? OrderType.name.rawValue
+        orderType = OrderType(rawValue: orderTypePreferences) ?? .name
         orderByButton.setTitle("Ordenar por: \(orderType.rawValue)", for: .normal)
     }
     
@@ -184,6 +191,7 @@ class ManufacturerDetailViewController: UIViewController, UITableViewDelegate, U
         let imageData = beer.imageData
         
         cell.configure(name: name, logoData: imageData)
+        cell.showsReorderControl = true
         
         return cell
     }
@@ -199,4 +207,12 @@ class ManufacturerDetailViewController: UIViewController, UITableViewDelegate, U
             tableView.reloadSections([indexPath.section], with: .automatic)
         }
     }
+    
+//    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+//        true
+//    }
+//    
+//    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//        
+//    }
 }

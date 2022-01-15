@@ -98,6 +98,14 @@ class EditBeerTableViewController: UITableViewController, UIImagePickerControlle
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             alertController.addAction(UIAlertAction(title: "Librería", style: .default, handler: { [weak self] _ in
+                imagePickerController.sourceType = .photoLibrary
+                self?.present(imagePickerController, animated: true)
+            }))
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            alertController.addAction(UIAlertAction(title: "Cámara", style: .default, handler: { [weak self] _ in
+                imagePickerController.sourceType = .camera
                 self?.present(imagePickerController, animated: true)
             }))
         }
