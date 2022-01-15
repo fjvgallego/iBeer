@@ -47,4 +47,19 @@ struct Manufacturer: Codable, Equatable {
         self.origin = origin
         self.beers = mainFields[4].components(separatedBy: "\t").compactMap { Beer(fromLine: $0) }
     }
+    
+    mutating func addBeer(_ beer: Beer) {
+        guard !beers.contains(beer) else { return }
+        beers.append(beer)
+    }
+    
+    mutating func updateBeer(_ beer: Beer) {
+        guard let beerIndex = beers.firstIndex(of: beer) else { return }
+        beers[beerIndex] = beer
+    }
+    
+    mutating func removeBeer(_ beer: Beer) {
+        guard let beerIndex = beers.firstIndex(of: beer) else { return }
+        beers.remove(at: beerIndex)
+    }
 }

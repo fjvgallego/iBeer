@@ -25,6 +25,7 @@
 		09330265277A557D001E42D3 /* AddManufacturerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330264277A557D001E42D3 /* AddManufacturerTableViewController.swift */; };
 		09330267277A55A7001E42D3 /* EditBeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09330266277A55A7001E42D3 /* EditBeerTableViewController.swift */; };
 		09AF8289277B7774006EE9F9 /* appdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09AF8288277B7774006EE9F9 /* appdata.txt */; };
+		09E86FC0277CEC6100DD1FCD /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86FBF277CEC6100DD1FCD /* OrderType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		09330264277A557D001E42D3 /* AddManufacturerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddManufacturerTableViewController.swift; sourceTree = "<group>"; };
 		09330266277A55A7001E42D3 /* EditBeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBeerTableViewController.swift; sourceTree = "<group>"; };
 		09AF8288277B7774006EE9F9 /* appdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = appdata.txt; sourceTree = "<group>"; };
+		09E86FBF277CEC6100DD1FCD /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				09330250277A469D001E42D3 /* Model.swift */,
+				09E86FBF277CEC6100DD1FCD /* OrderType.swift */,
 				09330253277A46AE001E42D3 /* Manufacturers */,
 				09330252277A46A7001E42D3 /* Beers */,
 			);
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E86FC0277CEC6100DD1FCD /* OrderType.swift in Sources */,
 				09330265277A557D001E42D3 /* AddManufacturerTableViewController.swift in Sources */,
 				09330233277A4393001E42D3 /* AppDelegate.swift in Sources */,
 				09330259277A4B83001E42D3 /* ManufacturersViewController.swift in Sources */,

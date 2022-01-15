@@ -26,7 +26,7 @@ struct Model {
         manufacturers.append(manufacturer)
     }
     
-    mutating func editManufacturer(_ manufacturer: Manufacturer) {
+    mutating func updateManufacturer(_ manufacturer: Manufacturer) {
         guard let manufacturerIndex = manufacturers.firstIndex(of: manufacturer) else { return }
         manufacturers[manufacturerIndex] = manufacturer
     }
