@@ -36,6 +36,15 @@ struct Model {
         manufacturers.remove(at: manufacturerIndex)
     }
     
+    mutating func createOrUpdateOnlineManufacturer(with beers: [Beer]) {
+        if let onlineManufacturerIndex = manufacturers.firstIndex(where: { $0.origin == .online }) {
+            manufacturers[onlineManufacturerIndex].beers = beers
+        } else {
+            let onlineManufacturer = Manufacturer(name: "PunkAPI", establishmentDate: Date.now, logoData: nil, origin: .online, beers: beers)
+            manufacturers.append(onlineManufacturer)
+        }
+    }
+    
     // MARK: Methods to load data.
     
     mutating func loadManufacturers() {

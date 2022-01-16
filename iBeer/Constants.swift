@@ -14,6 +14,4 @@ struct Constants {
     static let kFM = FileManager.default
     static let kBundle = Bundle.main
     static let kUnknownImageName = "unknown-logo"
-    static let kLightFont = "Kanit-Light"
-    static let kMediumFont = "Kanit-Medium"
 }

@@ -28,6 +28,8 @@
 		099E52E827931BF6004DB4C8 /* Kanit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099E52D527931BF6004DB4C8 /* Kanit-Medium.ttf */; };
 		09AF8289277B7774006EE9F9 /* appdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09AF8288277B7774006EE9F9 /* appdata.txt */; };
 		09E86FC0277CEC6100DD1FCD /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E86FBF277CEC6100DD1FCD /* OrderType.swift */; };
+		09FE63D22794973D00C163AE /* OnlineBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE63D12794973D00C163AE /* OnlineBeer.swift */; };
+		09FE63D4279497CE00C163AE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE63D3279497CE00C163AE /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		099E52D527931BF6004DB4C8 /* Kanit-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-Medium.ttf"; sourceTree = "<group>"; };
 		09AF8288277B7774006EE9F9 /* appdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = appdata.txt; sourceTree = "<group>"; };
 		09E86FBF277CEC6100DD1FCD /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		09FE63D12794973D00C163AE /* OnlineBeer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineBeer.swift; sourceTree = "<group>"; };
+		09FE63D3279497CE00C163AE /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +93,11 @@
 				09AF8288277B7774006EE9F9 /* appdata.txt */,
 				09330232277A4393001E42D3 /* AppDelegate.swift */,
 				09330234277A4393001E42D3 /* SceneDelegate.swift */,
-				099E52C227931BF6004DB4C8 /* Fonts */,
 				09330254277A471B001E42D3 /* Constants.swift */,
-				09330247277A43AB001E42D3 /* View Controllers */,
+				09FE63D3279497CE00C163AE /* APICaller.swift */,
+				099E52C227931BF6004DB4C8 /* Fonts */,
 				09330246277A43A8001E42D3 /* Model */,
+				09330247277A43AB001E42D3 /* View Controllers */,
 				09330238277A4393001E42D3 /* Main.storyboard */,
 				0933023B277A4393001E42D3 /* Assets.xcassets */,
 				0933023D277A4393001E42D3 /* LaunchScreen.storyboard */,
@@ -126,6 +131,7 @@
 			children = (
 				09330248277A43D6001E42D3 /* Beer.swift */,
 				0933024A277A443A001E42D3 /* BeerType.swift */,
+				09FE63D12794973D00C163AE /* OnlineBeer.swift */,
 			);
 			path = Beers;
 			sourceTree = "<group>";
@@ -256,6 +262,8 @@
 				09330261277A4C0D001E42D3 /* ManufacturerDetailViewController.swift in Sources */,
 				09330251277A469D001E42D3 /* Model.swift in Sources */,
 				09330255277A471B001E42D3 /* Constants.swift in Sources */,
+				09FE63D4279497CE00C163AE /* APICaller.swift in Sources */,
+				09FE63D22794973D00C163AE /* OnlineBeer.swift in Sources */,
 				0933025D277A4BC9001E42D3 /* ManufacturerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

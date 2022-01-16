@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMX-7I-G73">
-                                <rect key="frame" x="20" y="1043" width="704" height="40"/>
+                                <rect key="frame" x="382" y="1043" width="342" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="WPh-SD-hWw"/>
@@ -37,6 +37,21 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Vcg-ge-p7S" kind="presentation" id="Yh6-mz-ULI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-1j-yaL">
+                                <rect key="frame" x="20" y="1043" width="342" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nfo-3E-1dc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Importar Fabricantes (online)">
+                                    <fontDescription key="titleFontDescription" name="Kanit-Medium" family="Kanit" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="importManufacturersButtonTapped:" destination="3o8-mi-KQM" eventType="touchUpInside" id="Inu-no-Wwt"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WxV-Nb-RAY">
@@ -93,17 +108,48 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mux-v1-Y1k">
+                                <rect key="frame" x="272" y="466.5" width="200" height="200"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yF4-TI-zAz">
+                                        <rect key="frame" x="90" y="90" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descargando datos..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoN-uw-eK9">
+                                        <rect key="frame" x="19" y="150" width="162.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6AR-7S-jjH"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eoN-uw-eK9" secondAttribute="trailing" id="7BN-AO-jEP"/>
+                                    <constraint firstItem="yF4-TI-zAz" firstAttribute="centerY" secondItem="mux-v1-Y1k" secondAttribute="centerY" id="Da5-JM-zSv"/>
+                                    <constraint firstItem="eoN-uw-eK9" firstAttribute="top" secondItem="yF4-TI-zAz" secondAttribute="bottom" constant="40" id="IFs-0Y-0m0"/>
+                                    <constraint firstItem="eoN-uw-eK9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mux-v1-Y1k" secondAttribute="leading" id="KlX-TP-2nI"/>
+                                    <constraint firstItem="eoN-uw-eK9" firstAttribute="centerX" secondItem="mux-v1-Y1k" secondAttribute="centerX" id="NXp-rc-cTV"/>
+                                    <constraint firstAttribute="width" constant="200" id="PtB-UF-hLo"/>
+                                    <constraint firstItem="yF4-TI-zAz" firstAttribute="centerX" secondItem="mux-v1-Y1k" secondAttribute="centerX" id="WO1-6m-VYu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rQJ-8t-5NV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TMX-7I-G73" firstAttribute="leading" secondItem="rQJ-8t-5NV" secondAttribute="leading" constant="20" id="8ne-AL-liL"/>
+                            <constraint firstItem="mux-v1-Y1k" firstAttribute="centerY" secondItem="0bA-bt-tJd" secondAttribute="centerY" id="AcX-4G-aSJ"/>
+                            <constraint firstItem="dNU-1j-yaL" firstAttribute="top" secondItem="WxV-Nb-RAY" secondAttribute="bottom" constant="30" id="Bev-t7-8F6"/>
                             <constraint firstItem="WxV-Nb-RAY" firstAttribute="top" secondItem="rQJ-8t-5NV" secondAttribute="top" constant="20" id="NOh-NN-5ef"/>
+                            <constraint firstItem="dNU-1j-yaL" firstAttribute="leading" secondItem="rQJ-8t-5NV" secondAttribute="leading" constant="20" id="Qpe-CK-Urd"/>
                             <constraint firstItem="WxV-Nb-RAY" firstAttribute="leading" secondItem="rQJ-8t-5NV" secondAttribute="leading" id="R6f-7t-jTb"/>
                             <constraint firstItem="rQJ-8t-5NV" firstAttribute="bottom" secondItem="TMX-7I-G73" secondAttribute="bottom" constant="30" id="UTT-L8-HcE"/>
+                            <constraint firstItem="mux-v1-Y1k" firstAttribute="centerX" secondItem="0bA-bt-tJd" secondAttribute="centerX" id="Zyt-F3-YRx"/>
                             <constraint firstItem="TMX-7I-G73" firstAttribute="top" secondItem="WxV-Nb-RAY" secondAttribute="bottom" constant="30" id="bbn-Q3-9z2"/>
-                            <constraint firstItem="rQJ-8t-5NV" firstAttribute="trailing" secondItem="TMX-7I-G73" secondAttribute="trailing" constant="20" id="gLG-bn-o6q"/>
                             <constraint firstItem="rQJ-8t-5NV" firstAttribute="trailing" secondItem="WxV-Nb-RAY" secondAttribute="trailing" id="j7p-YT-5vP"/>
+                            <constraint firstItem="rQJ-8t-5NV" firstAttribute="trailing" secondItem="TMX-7I-G73" secondAttribute="trailing" constant="20" id="kb1-se-L5T"/>
+                            <constraint firstItem="rQJ-8t-5NV" firstAttribute="bottom" secondItem="dNU-1j-yaL" secondAttribute="bottom" constant="30" id="p6x-SZ-szR"/>
+                            <constraint firstItem="TMX-7I-G73" firstAttribute="width" secondItem="dNU-1j-yaL" secondAttribute="width" id="xoU-sI-LoL"/>
+                            <constraint firstItem="TMX-7I-G73" firstAttribute="leading" secondItem="dNU-1j-yaL" secondAttribute="trailing" constant="20" id="zGt-h3-HHV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Fabricantes" largeTitleDisplayMode="always" id="znw-5L-llo">
@@ -114,7 +160,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="yF4-TI-zAz" id="pA1-sa-2nb"/>
+                        <outlet property="addManufacturerButton" destination="TMX-7I-G73" id="maG-fu-l8E"/>
                         <outlet property="editButton" destination="h77-m6-keh" id="d4n-Q2-07s"/>
+                        <outlet property="loadingView" destination="mux-v1-Y1k" id="2NX-2u-i5l"/>
                         <outlet property="tableView" destination="WxV-Nb-RAY" id="77Z-HM-PLn"/>
                     </connections>
                 </viewController>
@@ -776,6 +825,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

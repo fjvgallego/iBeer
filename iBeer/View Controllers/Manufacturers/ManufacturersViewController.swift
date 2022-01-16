@@ -14,6 +14,10 @@ class ManufacturersViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
+    @IBOutlet weak var addManufacturerButton: UIButton!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     // MARK: Methods
     
     override func viewDidLoad() {
@@ -31,12 +35,54 @@ class ManufacturersViewController: UIViewController, UITableViewDelegate, UITabl
         return filteredManufacturers
     }
     
+    private func showErrorAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alertController, animated: true)
+        }
+    }
+    
+    private func updateLoadingView(isLoading: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            if isLoading {
+                self?.activityIndicator.startAnimating()
+                self?.loadingView.isHidden = false
+            } else {
+                self?.activityIndicator.stopAnimating()
+                self?.loadingView.isHidden = true
+            }
+        }
+    }
+    
     // Outlet actions
     
     @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
         let isEditing = tableView.isEditing
         editButton.title = !isEditing ? "Hecho" : "Editar"
         tableView.setEditing(!isEditing, animated: true)
+    }
+    
+    @IBAction func importManufacturersButtonTapped(_ sender: UIButton) {
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.updateLoadingView(isLoading: true)
+            
+            APICaller.shared.fetchBeers { result in
+                switch result {
+                case .failure(let error):
+                    self?.showErrorAlert(message: error.localizedDescription)
+                case .success(let fetchedBeers):
+                    Model.shared.createOrUpdateOnlineManufacturer(with: fetchedBeers)
+                    DispatchQueue.main.async { [weak self] in
+                        let section = Origin.allCases.firstIndex(of: .online)!
+                        self?.tableView.reloadSections([section], with: .automatic)
+                    }
+                }
+                
+                self?.updateLoadingView(isLoading: false)
+            }
+        }
     }
     
     @IBAction func unwindToManufacturersViewController(segue: UIStoryboardSegue) {
