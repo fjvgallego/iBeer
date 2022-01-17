@@ -60,10 +60,17 @@ class AddManufacturerTableViewController: UITableViewController, UIImagePickerCo
         alertController.popoverPresentationController?.sourceView = sender
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let alertAction = UIAlertAction(title: "Librería", style: .default) { [weak self] _ in
+            let alertAction = UIAlertAction(title: "Biblioteca", style: .default) { [weak self] _ in
                 self?.present(imagePickerController, animated: true)
             }
             alertController.addAction(alertAction)
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            alertController.addAction(UIAlertAction(title: "Cámara", style: .default, handler: { [weak self] _ in
+                imagePickerController.sourceType = .camera
+                self?.present(imagePickerController, animated: true)
+            }))
         }
         
         present(alertController, animated: true)
